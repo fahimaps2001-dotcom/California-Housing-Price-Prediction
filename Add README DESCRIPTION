@@ -1,0 +1,36 @@
+California Housing Price Prediction 🏠
+
+​Objective
+​This project evaluates various supervised learning regression techniques by applying them to the California Housing Dataset. The goal is to predict the median house value (MedHouseVal) based on features like median income, house age, and location (latitude/longitude).
+​🛠 Tech Stack
+​Language: Python 3.x
+​Libraries: * Scikit-Learn: Model implementation, scaling, and evaluation.
+​Pandas & NumPy: Data manipulation.
+​Matplotlib & Seaborn: Data visualization and EDA.
+
+​📋 Project Workflow
+​1. Data Preprocessing & EDA
+​Standardization: Applied StandardScaler to ensure all features contribute equally, which is vital for distance-based models like SVR.
+​EDA: Generated a correlation heatmap to identify strong predictors (e.g., MedInc).
+
+​2. Model Implementation
+​We implemented and compared five major regression algorithms:
+​Linear Regression: Baseline model.
+​Decision Tree Regressor: Captures non-linear relationships.
+​Random Forest Regressor: An ensemble of trees to reduce variance.
+​Gradient Boosting Regressor: Sequential tree building to minimize error.
+​Support Vector Regressor (SVR): High-dimensional hyperplane optimization.
+
+​3. Evaluation Metrics
+​Models were evaluated using:
+​R-Squared (R^2): Measures the proportion of variance explained.
+​Mean Squared Error (MSE): Penalizes large errors.
+​Mean Absolute Error (MAE): Provides an average error magnitude.
+
+​4. Optimization
+​Cross-Validation: Used 5-fold CV to ensure model stability across different data splits.
+​Hyperparameter Tuning: Conducted GridSearchCV on the top-performing model to find optimal parameters (learning rate, depth, etc.).
+
+Results Summary
+​Best Model: Gradient Boosting Regressor (Highest R^2, Lowest MSE).
+​Reasoning: The dataset contains complex spatial relationships (Longitude/Latitude) and non-linear interactions that ensemble boosting methods are uniquely equipped to handle.
